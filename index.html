@@ -1,31 +1,195 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
-    </head>
-    <body> 
-        <header style="color: crimson;font-size: 50px;"> Hi! Welcome to visit my website 😀 </header>
-        <header> Education </header>
-        <header> Background</header>
-        <header>Project</header>
-        <h1 style="color: crimson;font-size: 60px;">Education</h1>
-        <p><strong>My major is Environmental Science and Policy </strong></p>
-        <img src="Images\Clarkulogo.jpeg" alt="width="300" height="200"">
-        <p style="background-image: url('Images\Clarkulogo.jpeg')">Clark University is a private research <br> university in Worcester, Massachusetts. Founded in 1887 <br> with a large endowment from its namesake Jonas Gilman <br> Clark, a prominent businessman, Clark was one of the first <br> modern research universities in the United States.</p>
-        <!--[if lt IE 7]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
-        <hi>welcome to my website</hi>
-        
-        <script src="" async defer></script>
-    </body>
-</html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="mediaqueries.css"/>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="logo">Daria Minakova</div>
+        <!-- Hamburger Menu Icon for Mobile -->
+        <div class="hamburger-menu" onclick="toggleMenu()">
+            <div class="hamburger-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        <!-- Desktop Menu Links -->
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <!-- Mobile Menu Links -->
+        <ul class="menu-links">
+            <li><a href="#about" onclick="toggleMenu()">About</a></li>
+            <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+            <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+            <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+        </ul>
+    </nav>
+    <section id="profile">
+        <div class="section__pic-container">
+            <img src="./assets/profile-pic.png" alt="Daria Minakova profile picture">
+        </div>
+        <div class="section__text">
+            <p class="section__text__p1">Hello, I'm</p>
+            <h1 class="title">Daria Minakova</h1>
+            <p class="section__text__p2">A student currently pursuing a Master's degree in Environmental Science and Policy at Clark University</p>
+        <div class="btn-container">
+            <button class="btn btn-color-2" onclick="window.open('./assets/CV.pdf')">
+                Download CV
+            </button>
+            <button class="btn btn-color-1" onclick="location.href='./#contact'">
+                Contact Info
+            </button>
+        </div>
+        <div id="socials-container">
+            <img src="./assets/linkedin.png" alt="My LinkedIn profile"
+            class="icon" onclick="location.href='https://www.linkedin.com/in/daria-minakova-517862251/'"/>
+            <img src="./assets/github.png" alt="My Github profile"
+            class="icon" onclick="location.href='https://github.com/miinakova'"/>
+        </div>
+        </div>
+    </section>
+    <section id="about">
+        <p class="section__text__p1">Get To Know More</p>
+        <h1 class="title">About Me</h1>
+        <div class="section-container">
+            <div class="section__pic-container">
+                <img src="./assets/about-pic.png" alt="Profile picture"
+                class="about-pic"/>
+            </div>
+            <div class="about-details-container">
+                <div class="about-containers">
+                    <div class="details-container">
+                        <img src="./assets/experience.png" alt="Experience icon"
+                        class="icon"/>
+                        <h3>Education</h3>
+                        <p>Bachelor of Science in Ecology and Environmental Management, Kazan Federal University'23 <br>Master of Science in Enviromental Science and Policy, Clark University'25</p>
+                    </div>
+                    <div class="details-container">
+                        <img src="./assets/education.png" alt="Education icon"
+                        class="icon"/>
+                        <h3>Experience</h3>
+                        <p>I have expertise in environmental research and spatial analysis, utilizing GIS and data modeling to address issues like nutrient runoff, erosion, and microplastic pollution.<br>My work includes developing management strategies, enhancing environmental awareness, and leading projects on climate change and biodiversity.</p>
+                    </div>
+                </div>
+                <div class="text-container">
+                    <p></p>
+                </div>
+            </div>
+        </div>
+        <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#experience'" />
+    </section>
+    <section id="experience"> 
+        <p class="section__text__p1">Explore My</p>
+        <h1 class="title"> Experience</h1>
+        <div class="experience-details-container">
+            <div class="about-containers">
+                <div class="details-container">
+                    <h2 class="experience-sub-title">Environmentalist</h2>
+                        <div class="article-container">
+                            <article>
+                                <img src="./assets/checkmark.png" alt="Experience icon" class="icon"/>
+                                <div>
+                                    <h3>Research on microplastics</h3>
+                                    <p>Improvement of methodology for the detection of microplastics in freshwater</p>
+                                </div>
+                            </article>
+                            <article>
+                                <img src="./assets/checkmark.png" alt="Experience icon" class="icon"/>
+                                <div>
+                                    <h3>Center of Environmental Science and Policy</h3>
+                                    <p>Taught climate change topics, engaging youth in environmental education</p>
+                                </div>
+                            </article>
+                            <article>
+                                <img src="./assets/checkmark.png" alt="Experience icon" class="icon"/>
+                                <div>
+                                    <h3>Climate Change Event Organizer, Bard College</h3>
+                                    <p>Led a series of high school events on climate change, preparing materials and presentations for interactive sessions</p>
+                                </div>
+                            </article>
+                            <article>
+                                <img src="./assets/checkmark.png" alt="Experience icon" class="icon"/>
+                                <div>
+                                    <h3>Summer School on Climate Change, Nevada</h3>
+                                    <p>Received full funding to study climate change, further developing my knowledge and advocacy skills</p>
+                                </div>
+                            </article>
+                            <article>
+                                <img src="./assets/checkmark.png" alt="Experience icon" class="icon"/>
+                                <div>
+                                    <h3>Course Assistant for Climate Change, Energy and Development, Clark University</h3>
+                                    <p>Assisted in a course exploring the intersection of climate change, energy production, and development, focusing on policy frameworks and sustainable solutions</p>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="details-containers">
+                            <h2 class="experience-sub-title">GIS</h2>
+                                <div class="article-container">
+                                    <article>
+                                        <img src="./assets/checkmark.png" alt="Experience icon" class="icon"/>
+                                        <div>
+                                            <h3>Gully erosion research</h3>
+                                            <p>Manually decodedand cadenced gully erosion in the territory of Predkamye of the Republic of
+                                                Tatarstan using QGIS and MapInfosoftware</p>
+                                        </div>
+                                    </article>
+                                    <article>
+                                        <img src="./assets/checkmark.png" alt="Experience icon" class="icon"/>
+                                        <div>
+                                            <h3>GIS intern, Russia</h3>
+                                            <p>Assisted in data entry and spatial analysis tasks using GIS software</p>
+                                        </div>
+                                    </article>
+                                    <article>
+                                        <img src="./assets/checkmark.png" alt="Experience icon" class="icon"/>
+                                        <div>
+                                            <h3>ArcGISPro</h3>
+                                            <p>Intermediate</p>
+                                        </div>
+                                    </article>
+                                    <article>
+                                        <img src="./assets/checkmark.png" alt="Experience icon" class="icon"/>
+                                        <div>
+                                            <h3>QGIS</h3>
+                                            <p>Intermediate</p>
+                                        </div>
+                                    </article>
+                                    <article>
+                                        <img src="./assets/checkmark.png" alt="Experience icon" class="icon"/>
+                                        <div>
+                                            <h3>R</h3>
+                                            <p>Intermediate</p>
+                                        </div>
+                                    </article>
+                                </div>
+                    
+                </div>
+            </div>
+        </div>
+        <img src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#projects'"
+        />
+    </section>
+    <section id="projects">
+        <p class="section__text__p1">Browse My Recent</p>
+        <h1 class="title"> Projects</h1>
+        <div class="experience-details-container">
+            <div class="details-container color-container">
+                <div class="article-container">
+                    <img src="./assets/"
+                </div>
+            </div>
+        </div>
+    </section>

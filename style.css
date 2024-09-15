@@ -1,0 +1,415 @@
+/* GENERAL */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+p {
+    color: rgb(85, 85, 85);
+}
+
+/* TRANSITION */
+a,
+.btn {
+    transition: all 300ms ease;
+}
+
+/* Main Navigation */
+nav {
+    display: flex;
+    justify-content: space-between; /* Align items to the sides */
+    align-items: center; /* Vertically center items */
+    padding: 0 1rem; /* Add padding to the left and right */
+    height: 17vh;
+}
+
+/* Hamburger Menu */
+.hamburger-menu {
+    display: none; /* Hidden by default for desktop view */
+}
+
+/* Logo */
+.logo {
+    font-size: 2rem;
+}
+
+.logo:hover {
+    cursor: default;
+}
+
+/* Menu Links */
+.nav-links {
+    display: flex; /* Flexbox for horizontal layout */
+    gap: 2rem; /* Spacing between menu items */
+    list-style: none; /* Remove bullet points */
+    font-size: 1.5rem;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+a:hover {
+    color: grey;
+    text-decoration: underline;
+    text-underline-offset: 1rem;
+    text-decoration-color: rgb(181, 181, 181);
+}
+
+/* Hamburger Menu Icon */
+.hamburger-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 24px;
+    width: 30px;
+    cursor: pointer;
+}
+
+.hamburger-icon span {
+    width: 100%;
+    height: 2px;
+    background-color: black;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Dropdown Menu */
+.menu-links {
+    position: absolute;
+    top: 17vh; /* Adjust position below the nav */
+    right: 1rem;
+    background-color: white;
+    width: fit-content;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+.menu-links a {
+    display: block;
+    padding: 10px;
+    text-align: center;
+    font-size: 1.5rem;
+    color: black;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.menu-links li {
+    list-style: none;
+}
+
+/* Open Class for Mobile Menu */
+.menu-links.open {
+    max-height: 300px;
+}
+
+/* Transform Hamburger Icon */
+.hamburger-icon.open span:first-child {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger-icon.open span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger-icon.open span:last-child {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Hide menu links by default on small screens */
+    }
+
+    .hamburger-menu {
+        display: block; /* Show hamburger menu on small screens */
+    }
+
+    .menu-links.open {
+        display: flex; /* Display menu links when open */
+        flex-direction: column; /* Stack menu links vertically */
+        position: absolute;
+        right: 1rem; /* Position it to the right */
+        top: 17vh; /* Adjust position below the nav */
+        background-color: white; /* Background color for visibility */
+        width: fit-content;
+    }
+}
+
+@media (min-width: 769px) {
+    .nav-links {
+        display: flex; /* Show menu links horizontally */
+        gap: 2rem;
+    }
+
+    .hamburger-menu {
+        display: none; /* Hide hamburger menu on large screens */
+    }
+}
+
+/* SECTIONS */
+
+section {
+    padding-top: 4vh;
+    height: 96vh;
+    margin: 0 10rem;
+    box-sizing: border-box;
+    min-height: fit-content;
+    }
+
+    .section-container {
+        display: flex;
+    }
+
+  /* PROFILE SECTION */  
+  
+  #profile {
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+    height: 80vh;
+}
+
+.section__pic-container {
+    display: flex;
+    height: 400px;
+    width: 400px;
+    margin: auto 0;
+}
+
+.section__text{
+    align-self: center;
+    text-align: center;
+}
+
+.section__text p{
+    font-weight: 600;
+}
+
+.section__text__p1 {
+    text-align: center;
+}
+
+.section__text__p1 {
+    font-size: 1.75rem;
+    margin-bottom: 1rem ;
+}
+
+.title{
+    font-size: 3rem;
+    text-align: center;
+}
+
+#socials-container {
+display: flex;
+justify-content: center;
+margin-top: 1rem;
+gap: 1rem;
+}
+
+/* ICONS */
+
+.icon {
+    cursor: pointer;
+    height: 2rem;
+}
+
+/* BUTTONS */
+
+.btn-container{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.btn{
+    font-weight: 600;
+    transition: all 300ms ease;
+    padding: 1rem;
+    width: 8rem;
+    border-radius: 2rem;
+}
+
+.btn-color-1, .btn-color-2 {
+    border: rgb(53, 53, 53) 0.1rem solid;
+}
+
+.btn-color-1;:hover, .btn-color-2:hover {
+    cursor: pointer;
+}
+
+.btn-color-1, .btn-color-2:hover {
+   background: rgb(53, 53, 53);
+   color: white;
+}
+
+.btn-color-1:hover{
+    background: rgb(0, 0, 0);
+}
+
+.btn-color-2 {
+    background: none;
+}
+
+.btn-color-2:hover {
+    border: rgb(255, 255, 255) o.1rem solid;
+}
+
+.btn-container{
+    gap: 1rem
+}
+
+/* ABOUT SECTION */
+
+#about {
+    position: relative;
+}
+
+.about-containers {
+    gap: 2rem;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+}
+
+.about-details-container{
+    justify-content: center;
+    flex-direction: column;
+}
+
+.about-containers, .about-details-container {
+    display: flex;
+}
+
+.about-pic {
+    border-radius: 2rem;
+}
+
+.arrow {
+    position: absolute;
+    right: -5rem;
+    bottom: 2.5rem;
+}
+
+.details-container {
+    padding: 1.5rem;
+    flex: 1;
+    background: white;
+    border-radius: 2rem;
+    border: 0.1rem solid rgb(163, 163, 163);
+    text-align: center;
+}
+
+
+
+}
+
+.section-container {
+    gap: 4rem;
+    height: 80%;
+}
+
+.section__pic-container {
+    height: 400pix;
+    width: 400pix;
+    margin: auto 0;
+}
+
+/* EXPERIENCE SECTION*/
+
+#experience {
+    position: relative;
+}
+
+.experience-sub-title {
+    color: rgb(85, 85, 85);
+    font-weight: 600;
+    font-size: 1.75rem;
+    margin-bottom: 2rem;
+}
+
+.experience-details-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.article-container {
+    display: flex;
+    flex-wrap: wrap; /* This ensures the elements wrap if they exceed container width */
+    gap: 2.5rem;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%; /* Adjust the width so that the items take up the full space */
+    max-width: 400px; /* Set a max width to avoid overflowing content */
+}
+
+article p {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+article {
+    display: flex;
+    width: 10rem;
+    justify-content: space-around;
+    gap: 0.5rem;
+}
+
+article .icon {
+    cursor: default;
+}
+
+.experience-section {
+    display: flex;
+    justify-content: space-around;
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.experience-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 45%; /* Adjust based on how much space you want each section to take */
+    background-color: #f4f4f4;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+.experience-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 1rem;
+}
+
+.experience-item h3 {
+    margin: 1rem 0;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.experience-item p {
+    font-size: 1rem;
+    text-align: center;
+}
+
+/* PROJECTS SECTION */
